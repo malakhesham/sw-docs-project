@@ -1,0 +1,32 @@
+
+<div class="app-shell" style="min-height:100vh;display:flex;flex-direction:column;background:#0f172a;color:#e2e8f0;font-family:Arial">
+
+  <header style="display:flex;justify-content:space-between;align-items:center;padding:20px 28px;background:#111827;border-bottom:1px solid #1f2937">
+
+    <div>
+      <div style="font-size:20px;font-weight:bold;display:flex;gap:8px;align-items:center">
+        💰 Personal Finance
+      </div>
+      <div style="font-size:12px;color:#94a3b8">
+        Track monthly spending, subscriptions and income
+      </div>
+    </div>
+
+    <div style="text-align:right">
+      <div style="font-size:12px;color:#94a3b8">Total balance</div>
+      <div style="font-size:18px;font-weight:bold;color:#22c55e">
+        {{ totalBalance() | currency }}
+      </div>
+    </div>
+
+  </header>
+
+  <main style="flex:1;padding:20px">
+    <app-dashboard></app-dashboard>
+  </main>
+
+  <footer style="text-align:center;padding:10px;font-size:12px;color:#64748b;border-top:1px solid #1f2937">
+    later
+  </footer>
+
+</div>

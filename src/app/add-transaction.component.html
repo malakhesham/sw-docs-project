@@ -1,0 +1,47 @@
+
+
+<div class="modal-content" style="background:#111827;padding:20px;border-radius:12px;width:400px;color:#fff;font-family:Arial">
+
+  <h2 style="margin-bottom:15px">
+    {{ transaction ? 'Edit Transaction' : 'Add Transaction' }}
+  </h2>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+
+    <label style="display:block;margin-top:10px;color:#94a3b8;font-size:12px">Title</label>
+    <input formControlName="title" required
+      style="width:100%;padding:10px;margin-top:5px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:white">
+
+    <label style="display:block;margin-top:10px;color:#94a3b8;font-size:12px">Amount</label>
+    <input formControlName="amount" type="number" required
+      style="width:100%;padding:10px;margin-top:5px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:white">
+
+    <label style="display:block;margin-top:10px;color:#94a3b8;font-size:12px">Type</label> c
+    <select formControlName="type"
+      style="width:100%;padding:10px;margin-top:5px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:white">
+
+      <option value="income">Income</option>
+      <option value="expense">Expense</option>
+      <option value="subscription">Subscription</option>
+    </select>
+
+    <label style="display:block;margin-top:10px;color:#94a3b8;font-size:12px">Category</label>
+    <input formControlName="category"
+      style="width:100%;padding:10px;margin-top:5px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:white">
+
+    <div style="display:flex;justify-content:flex-end;gap:10px;margin-top:15px">
+
+      <button type="submit"
+        style="padding:8px 12px;border:none;border-radius:8px;cursor:pointer;background:#22c55e;color:black">
+        {{ transaction ? 'Save' : 'Add' }}
+      </button>
+
+      <button type="button" (click)="close.emit()"
+        style="padding:8px 12px;border:none;border-radius:8px;cursor:pointer;background:#64748b;color:white">
+        Cancel
+      </button>
+
+    </div>
+
+  </form>
+</div>
