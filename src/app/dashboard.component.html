@@ -42,7 +42,7 @@
     </div>
   </aside>
 
-        <div *ngIf="showModal" class="modal">
+        <div *ngIf="showModal" class="modal"> 
         <app-add-transaction [transaction]="editingTransaction()" (close)="showModal = false" (saved)="handleSave($event)"></app-add-transaction>
 
 
